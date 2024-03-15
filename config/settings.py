@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # Third-Party App
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -46,6 +47,7 @@ INSTALLED_APPS = [
     # Local Apps
     'accounts.apps.AccountsConfig',
     'pages.apps.PagesConfig',
+    'blog.apps.BlogConfig',
 ]
 
 MIDDLEWARE = [
