@@ -1,0 +1,10 @@
+{% extends '_base.html' %}
+{% block page_title %}Blog{% endblock page_title%}
+{% block content %}
+    {% for post in posts %}
+        {{ post.title }}<br>
+        {{ post.text }}<br>
+        {{ post.author }}
+    {% endfor %}
+    
+{% endblock content%}
