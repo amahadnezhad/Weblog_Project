@@ -137,3 +137,7 @@ AUTH_USER_MODEL = 'accounts.CustomUser'
 LOGIN_REDIRECT_URL = 'posts_list'
 LOGOUT_REDIRECT_URL = 'posts_list'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# Crispy Forms Setting
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
+CRISPY_TEMPLATE_PACK = "bootstrap4"

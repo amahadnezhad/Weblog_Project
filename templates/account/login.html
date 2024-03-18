@@ -1,4 +1,6 @@
 {% extends "_base.html" %}
+{% load crispy_forms_tags %}
+
 {% block page_title %}login{% endblock page_title %}
 
 {% block content %}
@@ -7,7 +9,7 @@
             <h1 class="text-center">Login</h1>
             <form method="post">
                 {% csrf_token %}
-                {{ form.as_table }}
+                {{ form|crispy }}
                 <button type="submit" class="btn btn-success mt-3 w-100">login</button>
                 <div class="line-with-middle-sep">
                   <center>
