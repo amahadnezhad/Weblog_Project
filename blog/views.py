@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views import generic
 
 from .models import Post
+from .forms import PostForm
 
 
 class PostsListView(generic.ListView):
@@ -14,3 +15,9 @@ class PostDetailView(generic.DetailView):
     model = Post
     template_name = "blog/post_detail.html"
     context_object_name = 'post'
+
+
+class PostCreateView(generic.CreateView):
+    model = Post
+    form_class = PostForm
+    template_name = "blog/post_create.html"
