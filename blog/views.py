@@ -23,3 +23,10 @@ class PostCreateView(generic.CreateView):
     form_class = PostForm
     template_name = "blog/post_create.html"
     success_url = reverse_lazy('posts_list')
+
+
+class PostUpdateView(generic.UpdateView):
+    model = Post
+    form_class = PostForm
+    template_name = "blog/post_update.html"
+
