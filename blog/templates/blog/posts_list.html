@@ -11,6 +11,14 @@
                                 <h5 class="card-title">{{ post.title }}</h5>
                                 <h6 class="card-subtitle mb-2 text-muted small py-2">{{ post.date_created }} |
                                     By: {{ post.author }}</h6>
+                                <center>
+                                    <div class="col-xs-12 col-md-3 d-flex justify-content-center">
+                                        {% if post.cover %}
+                                            <img src="{{ post.cover.url }}"
+                                                 class="img-fluid rounded-start">
+                                        {% endif %}
+                                    </div>
+                                </center>
                                 <p class="card-text py-3">
                                     {{ post.text }}
                                 </p>
