@@ -38,21 +38,14 @@ class PostDeleteView(generic.DeleteView):
 
 
 def like_post(request, pk):
-    post = get_object_or_404(Post, pk=pk)
-    user = request.user
-
-    if user.is_authenticated:
-        if Like.objects.filter(user=user, post=post).exists():
-            # If the user has already liked the post, unlike it
-            Like.objects.filter(user=user, post=post).delete()
-            post.likes_count -= 1
-            post.save()
+    if request.method == 'POST':
+        post = Post.objects.get(id=pk)
+        if request.user in post.likes.all():
+            # User has already liked the post, so unlike it
+            post.likes.remove(request.user)
         else:
-            # If the user hasn't liked the post yet, like it
-            Like.objects.create(user=user, post=post)
-            post.likes_count += 1
-            post.save()
+            # User has not liked the post, so like it
+            post.likes.add(request.user)
+        return redirect('post_detail', pk=pk)
     else:
-        return redirect(reverse('account_login'))
-
-    return redirect(reverse('post_detail', kwargs={'pk': pk}))
+        return redirect('home')

@@ -14,7 +14,7 @@ class Post(models.Model):
     text = models.TextField()
     status = models.CharField(choices=STATUS_CHOICES, max_length=3)
     cover = models.ImageField(upload_to='covers/', blank=True)
-    likes_count = models.PositiveIntegerField(default=0)
+    likes = models.ManyToManyField(get_user_model(), related_name='liked_posts', blank=True)
     date_created = models.DateField(auto_now_add=True)
     datetime_created = models.DateTimeField(auto_now_add=True)
     datetime_modified = models.DateTimeField(auto_now=True)
