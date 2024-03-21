@@ -6,37 +6,29 @@
             <div class="col-12">
                 {% if posts %}
                     {% for post in posts %}
-                        <div class="card border-0 shadow-sm my-3">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        {% if post.cover %}
-                                            <img src="{{ post.cover.url }}" class="img-fluid rounded">
-                                        {% endif %}
-                                    </div>
-                                    <div class="col-md-9">
-                                        <h5 class="card-title">{{ post.title }}</h5>
-                                        <h6 class="card-subtitle mb-2 text-muted small">{{ post.date_created }} |
-                                            By: {{ post.author }}</h6>
-                                        <p class="card-text">{{ post.text }}</p>
-                                    </div>
-                                </div>
+                       <div class="card border-0 shadow-sm my-3">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-4">
+                {% if post.cover %}
+                    <img src="{{ post.cover.url }}" class="img-fluid rounded">
+                {% endif %}
+            </div>
+            <div class="col-md-8">
+                <h5 class="card-title">{{ post.title }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted small mt-2">{{ post.date_created | date:"F d, Y" }} | By: {{ post.author }}</h6>
+                <p class="card-text">{{ post.text }}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <a href="{% url 'post_detail' post.id %}" class="btn btn-sm btn-outline-success">Read More</a>
+                    </div>
+                    <small class="text-muted">Likes: {{ post.likes_count }}</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-                                <table class="w-100">
-                                    <tr>
-                                        <td class="text-right">
-                                            <a href="{% url 'post_detail' post.id %}" class="btn btn-sm btn-success">Read
-                                                More</a>
-                                        </td>
-                                        <td class="text-left">
-                                            <span>likes: {{ post.likes_count }}</span>
-                                        </td>
-                                    </tr>
-                                </table>
-
-
-                            </div>
-                        </div>
 
 
                     {% endfor %}
