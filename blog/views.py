@@ -52,5 +52,7 @@ def like_post(request, pk):
             Like.objects.create(user=user, post=post)
             post.likes_count += 1
             post.save()
+    else:
+        return redirect(reverse('account_login'))
 
     return redirect(reverse('post_detail', kwargs={'pk': pk}))
