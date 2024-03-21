@@ -14,6 +14,7 @@ class Post(models.Model):
     text = models.TextField()
     status = models.CharField(choices=STATUS_CHOICES, max_length=3)
     cover = models.ImageField(upload_to='covers/', blank=True)
+    likes_count = models.PositiveIntegerField(default=0)
     date_created = models.DateField(auto_now_add=True)
     datetime_created = models.DateTimeField(auto_now_add=True)
     datetime_modified = models.DateTimeField(auto_now=True)
@@ -23,3 +24,12 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return reverse('post_detail', args=[self.id])
+
+
+class Like(models.Model):
+    user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    datetime_created = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        unique_together = ("user", "post")
