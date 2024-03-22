@@ -25,6 +25,7 @@
                             <h3>Likes:</h3>
                             <!-- Like Button -->
                             <div class="text-center">
+                            {{ post.likes.count  }}
                                 {% if user.is_authenticated %}
                                     {% if user in post.likes.all %}
                                         <form method="POST" action="{% url 'like_post' post.id %}">

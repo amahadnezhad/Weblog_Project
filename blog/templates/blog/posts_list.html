@@ -22,7 +22,7 @@
                     <div class="btn-group">
                         <a href="{% url 'post_detail' post.id %}" class="btn btn-sm btn-outline-success">Read More</a>
                     </div>
-                    <small class="text-muted">Likes: {{ post.likes_count }}</small>
+                    <small class="text-muted">Likes: {{ post.likes.count }}</small>
                 </div>
             </div>
         </div>
