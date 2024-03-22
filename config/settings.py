@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'allauth.account',
     "crispy_forms",
     "crispy_bootstrap4",
+    'jalali_date',
 
     # Local Apps
     'accounts.apps.AccountsConfig',
