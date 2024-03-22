@@ -1,4 +1,6 @@
 {% extends '_base.html' %}
+{% load jalali_tags %}
+
 {% block page_title %}{{ post.title }}{% endblock page_title %}
 {% block content %}
     <div class="container mt-4">
@@ -6,7 +8,7 @@
             <div class="col-12">
                 <div class="card shadow my-3 p-5">
                     <h1>{{ post.title }}</h1>
-                    <p class="small text-muted mt-2">{{ post.date_created }} | By: {{ post.author }}</p>
+                    <p class="small text-muted mt-2">{{ post.date_created|to_jalali:'%Y/%m/%d' }} | By: {{ post.author }}</p>
                     <center>
                         <div class="col-xs-15 col-md-5 d-flex justify-content-center">
                             {% if post.cover %}
@@ -67,7 +69,7 @@
                         {% for comment in post.comments.all %}
                             <div class="border-bottom mt-3">
                                 <div class="review__meta" dir="rtl">
-                                    <span class="review__published-date">{{ comment.datetime_created }}</span>
+                                    <span class="review__published-date">{{ comment.datetime_created|to_jalali:'%Y/%m/%d' }}</span>
                                     <span class="review__dash"> - </span>
                                     <strong class="review__author px-4 ">{{ comment.user.username }}</strong>
                                 </div>

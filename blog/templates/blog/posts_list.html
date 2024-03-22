@@ -1,4 +1,6 @@
 {% extends '_base.html' %}
+{% load jalali_tags %}
+
 {% block page_title %}Blog{% endblock page_title %}
 {% block content %}
     <div class="container mt-4">
@@ -16,7 +18,7 @@
             </div>
             <div class="col-md-8">
                 <h5 class="card-title">{{ post.title }}</h5>
-                <h6 class="card-subtitle mb-2 text-muted small mt-2">{{ post.date_created | date:"F d, Y" }} | By: {{ post.author }}</h6>
+                <h6 class="card-subtitle mb-2 text-muted small mt-2">By: {{ post.author }} | {{ post.date_created|to_jalali:'%Y/%m/%d' }}</h6>
                 <p class="card-text">{{ post.text }}</p>
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
