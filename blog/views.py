@@ -2,6 +2,7 @@ from django.shortcuts import get_object_or_404, redirect, render
 from django.views import generic
 from django.urls import reverse_lazy, reverse
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 from .models import Post, Comment
 from .forms import PostForm, CommentForm
@@ -33,25 +34,25 @@ def post_detail_view(request, pk):
                                                              'comment_form': comment_form, })
 
 
-class PostCreateView(generic.CreateView):
+class PostCreateView(LoginRequiredMixin, generic.CreateView):
     model = Post
     form_class = PostForm
     template_name = "blog/post_create.html"
     success_url = reverse_lazy('posts_list')
 
 
-class PostUpdateView(generic.UpdateView):
+class PostUpdateView(LoginRequiredMixin, generic.UpdateView):
     model = Post
     form_class = PostForm
     template_name = "blog/post_update.html"
 
 
-class PostDeleteView(generic.DeleteView):
+class PostDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = Post
     template_name = "blog/post_delete.html"
     success_url = reverse_lazy("posts_list")
 
-
+@login_required
 def like_post(request, pk):
     if request.method == 'POST':
         post = Post.objects.get(id=pk)
