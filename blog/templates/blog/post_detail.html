@@ -88,7 +88,8 @@
                     <h3>Add new comment:</h3>
                     <form method="POST">
                         {% csrf_token %}
-                        <button type="submit" class="btn btn-primary mt-3">ارسال</button>
+                        {{ comment_form.as_p }}
+                        <button type="submit" class="btn btn-primary mt-3">Send</button>
                     </form>
                 </div>
             </div>
