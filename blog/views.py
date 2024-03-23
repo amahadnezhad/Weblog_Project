@@ -9,10 +9,12 @@ from .forms import PostForm, CommentForm
 
 
 class PostsListView(generic.ListView):
-    model = Post
     template_name = "blog/posts_list.html"
     paginate_by = 4
     context_object_name = 'posts'
+
+    def get_queryset(self):
+        return Post.objects.filter(status='pub').order_by('-datetime_created')
 
 
 @login_required
