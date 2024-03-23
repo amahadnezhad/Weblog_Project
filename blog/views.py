@@ -11,6 +11,7 @@ from .forms import PostForm, CommentForm
 class PostsListView(generic.ListView):
     model = Post
     template_name = "blog/posts_list.html"
+    paginate_by = 4
     context_object_name = 'posts'
 
 
@@ -51,6 +52,7 @@ class PostDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = Post
     template_name = "blog/post_delete.html"
     success_url = reverse_lazy("posts_list")
+
 
 @login_required
 def like_post(request, pk):
