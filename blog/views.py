@@ -1,6 +1,7 @@
 from django.shortcuts import get_object_or_404, redirect, render
 from django.views import generic
 from django.urls import reverse_lazy, reverse
+from django.contrib.auth.decorators import login_required
 
 from .models import Post, Comment
 from .forms import PostForm, CommentForm
@@ -12,11 +13,7 @@ class PostsListView(generic.ListView):
     context_object_name = 'posts'
 
 
-# class PostDetailView(generic.DetailView):
-#     model = Post
-#     template_name = "blog/post_detail.html"
-#     context_object_name = 'post'
-
+@login_required
 def post_detail_view(request, pk):
     post = get_object_or_404(Post, pk=pk)
     comments = post.comments.all()
