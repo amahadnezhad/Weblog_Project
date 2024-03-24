@@ -1,3 +1,4 @@
+{% load i18n %}
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en">
 <head>
@@ -18,17 +19,16 @@
         <a class="navbar-brand" href="{% url 'posts_list' %}">WeblogProject.ir</a>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link active"  href="{% url 'posts_list' %}">Home</a>
-                <a class="nav-link active" href="{% url 'post_create' %}">Create</a>
-                <a class="nav-link active" href="{% url 'aboutus' %}">AboutUs</a>
+                <a class="nav-link active"  href="{% url 'posts_list' %}">{% trans "Home" %}</a>
+                <a class="nav-link active" href="{% url 'post_create' %}">{% trans "Create" %}</a>
+                <a class="nav-link active" href="{% url 'aboutus' %}">{% trans "AboutUs" %}</a>
             </div>
         </div>
         <div class="mx-2 text-white">
             {% if user.is_authenticated %}
-
-                Welcome {{ user.username }} | <a class="text-light" href="{% url 'account_logout' %}">Logout</a>
+                {% trans "Welcome" %} {{ user.username }} | <a class="text-light" href="{% url 'account_logout' %}">{% trans "Logout" %}</a>
             {% else %}
-                <a class="text-light" href="{% url 'account_login' %}">Login</a> | <a class="text-light" href="{% url 'account_signup' %}">SignUp</a>
+                <a class="text-light" href="{% url 'account_login' %}">{% translate "Login" %}</a> | <a class="text-light" href="{% url 'account_signup' %}">{% trans "SignUp" %}</a>
             {% endif %}
         </div>
     </div>
