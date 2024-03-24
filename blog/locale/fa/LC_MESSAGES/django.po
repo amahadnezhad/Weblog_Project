@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-24 18:13+0330\n"
+"POT-Creation-Date: 2024-03-24 18:15+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\templates\blog\post_create.html:5 .\templates\blog\post_create.html:10
+#| msgid "Create New Post"
+msgid "New Post"
+msgstr "پست جدید"
+
+#: .\templates\blog\post_create.html:14
+#| msgid "Create New Post"
+msgid "Add New Post"
+msgstr "ساخت پست جدید"
 
 #: .\templates\blog\post_delete.html:5 .\templates\blog\post_delete.html:10
 #: .\templates\blog\post_delete.html:16
