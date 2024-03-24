@@ -4,6 +4,7 @@ from django.urls import reverse_lazy, reverse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib import messages
+from django.utils.translation import gettext as _
 
 from .models import Post, Comment
 from .forms import PostForm, CommentForm
@@ -31,7 +32,7 @@ def post_detail_view(request, pk):
             new_comment.user = request.user
             new_comment.save()
             comment_form = CommentForm()
-
+            messages.success(request, _("Comment Added SuccessFully"))
     else:
         comment_form = CommentForm()
 
@@ -65,9 +66,12 @@ def like_post(request, pk):
         if request.user in post.likes.all():
             # User has already liked the post, so unlike it
             post.likes.remove(request.user)
+            messages.error(request, _("Post Has Unliked"))
         else:
             # User has not liked the post, so like it
             post.likes.add(request.user)
+            messages.success(request, _("Post Has Liked"))
+
         return redirect('post_detail', pk=pk)
     else:
         return redirect('home')
