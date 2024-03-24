@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-24 18:07+0330\n"
+"POT-Creation-Date: 2024-03-24 18:13+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\templates\blog\post_delete.html:5 .\templates\blog\post_delete.html:10
+#: .\templates\blog\post_delete.html:16
+msgid "Delete"
+msgstr "حذف"
+
+#: .\templates\blog\post_delete.html:14
+msgid "Are You Sure To Delete "
+msgstr "آیا از حذف این مطلب مطمئن هستید؟"
 
 #: .\templates\blog\post_detail.html:29
 msgid "Likes"
