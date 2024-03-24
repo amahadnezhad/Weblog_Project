@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-24 17:50+0330\n"
+"POT-Creation-Date: 2024-03-24 17:58+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,10 +17,30 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
 #: .\templates\blog\posts_list.html:5
 msgid "Blog"
 msgstr "وبلاگ"
 
-#: .\templates\blog\posts_list.html:22
-msgid "By: "
-msgstr "توسط:"
+#: .\templates\blog\posts_list.html:28
+msgid "Read More"
+msgstr "بیشتر بخوانید"
+
+#: .\templates\blog\posts_list.html:41
+msgid "No Post Available!"
+msgstr "مطلبی یافت نشد!"
+
+#: .\templates\blog\posts_list.html:42
+msgid "Create New Post"
+msgstr "ساخت پست جدید"
+
+#: .\templates\blog\posts_list.html:52
+msgid "Previous"
+msgstr "قبلی"
+
+#: .\templates\blog\posts_list.html:58
+msgid "Next"
+msgstr "بعدی"
+
+#~ msgid "By: "
+#~ msgstr "توسط:"
