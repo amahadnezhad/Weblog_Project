@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-24 18:02+0330\n"
+"POT-Creation-Date: 2024-03-24 18:07+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,26 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\templates\blog\post_detail.html:29
+msgid "Likes"
+msgstr "علاقه مندی ها"
+
+#: .\templates\blog\post_detail.html:69
+msgid "Comments"
+msgstr "نظرات"
+
+#: .\templates\blog\post_detail.html:84
+msgid "No comments yet! Be the first one."
+msgstr "نظری یافت نشد! اولین نفر باشید."
+
+#: .\templates\blog\post_detail.html:90
+msgid "Add new comment"
+msgstr "نظر خود را بنویسید"
+
+#: .\templates\blog\post_detail.html:94
+msgid "Send"
+msgstr "ارسال"
 
 #: .\templates\blog\post_update.html:5
 msgid "Edit"

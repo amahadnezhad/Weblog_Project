@@ -1,6 +1,7 @@
 {% extends '_base.html' %}
 {% load jalali_tags %}
 {% load crispy_forms_tags %}
+{% load i18n %}
 
 {% block page_title %}{{ post.title }}{% endblock page_title %}
 {% block content %}
@@ -25,7 +26,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="card shadow my-3 p-5">
-                            <h3>Likes:</h3>
+                            <h3>{% trans "Likes" %}:</h3>
                             <!-- Like Button -->
                             <div class="text-center">
                                 {{ post.likes.count }}
@@ -65,7 +66,7 @@
             </div>
             <div class="col-12">
                 <div class="card shadow my-3 p-5">
-                    <h3>Comments:</h3>
+                    <h3>{% trans "Comments" %}:</h3>
                     {% if post.comments %}
                         {% for comment in post.comments.all %}
                             <div class="border-bottom mt-3">
@@ -80,17 +81,17 @@
                             </div>
                         {% endfor %}
                     {% else %}
-                        <p>No comments yet! Be the first one.</p>
+                        <p>{% trans "No comments yet! Be the first one." %}</p>
                     {% endif %}
                 </div>
             </div>
             <div class="col-12">
                 <div class="card shadow my-3 p-5">
-                    <h3>Add new comment:</h3>
+                    <h3>{% trans "Add new comment" %}:</h3>
                     <form method="POST">
                         {% csrf_token %}
                         {{ comment_form|crispy }}
-                        <button type="submit" class="btn btn-primary mt-3">Send</button>
+                        <button type="submit" class="btn btn-primary mt-3">{% trans "Send" %}</button>
                     </form>
                 </div>
             </div>
