@@ -3,6 +3,7 @@ from django.views import generic
 from django.urls import reverse_lazy, reverse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib import messages
 
 from .models import Post, Comment
 from .forms import PostForm, CommentForm
@@ -30,6 +31,7 @@ def post_detail_view(request, pk):
             new_comment.user = request.user
             new_comment.save()
             comment_form = CommentForm()
+
     else:
         comment_form = CommentForm()
 
