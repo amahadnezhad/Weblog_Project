@@ -26,9 +26,9 @@
         </div>
         <div class="mx-2 text-white">
             {% if user.is_authenticated %}
-                {% trans "Welcome" %} {{ user.username }} | <a class="text-light" href="{% url 'account_logout' %}">{% trans "Logout" %}</a>
+                {% trans "Welcome" %} {{ user.username }} | <a class="text-light text-decoration-none" href="{% url 'account_logout' %}">{% trans "Logout" %}</a>
             {% else %}
-                <a class="text-light" href="{% url 'account_login' %}">{% translate "Login" %}</a> | <a class="text-light" href="{% url 'account_signup' %}">{% trans "SignUp" %}</a>
+                <a class="text-light text-decoration-none" href="{% url 'account_login' %}">{% translate "Login" %}</a> | <a class="text-light text-decoration-none" href="{% url 'account_signup' %}">{% trans "SignUp" %}</a>
             {% endif %}
         </div>
     </div>
@@ -40,7 +40,7 @@
 <footer class="bg-body-tertiary text-center text-lg-start">
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
-    © 2024 Copyright:
+    © 2024 {% trans "Copyright" %}:
     <a class="text-decoration-none" href="https://github.com/amahadnezhad">amahadnezhad</a>
   </div>
   <!-- Copyright -->
