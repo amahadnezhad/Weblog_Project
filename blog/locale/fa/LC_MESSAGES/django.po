@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-24 18:15+0330\n"
+"POT-Creation-Date: 2024-03-25 01:14+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,13 +18,63 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
+#: .\models.py:9
+msgid "Published"
+msgstr "منتشرشده"
+
+#: .\models.py:10
+msgid "Draft"
+msgstr "پیش نویس"
+
+#: .\models.py:13
+msgid "Author"
+msgstr "نویسنده"
+
+#: .\models.py:14
+msgid "Title"
+msgstr "عنوان"
+
+#: .\models.py:15
+msgid "Text"
+msgstr "مطلب"
+
+#: .\models.py:16
+msgid "Status"
+msgstr "وضعیت"
+
+#: .\models.py:17
+msgid "Cover"
+msgstr "عکس"
+
+#: .\models.py:18
+msgid "likes"
+msgstr "علاقه مندی ها"
+
+#: .\models.py:19
+msgid "Date_created"
+msgstr "تاریخ ایجاد"
+
+#: .\models.py:20 .\models.py:33
+msgid "DateTime_Created"
+msgstr "تاریخ ایجاد"
+
+#: .\models.py:21
+msgid "DateTime_Modified"
+msgstr "تاریخ بروزرسانی"
+
+#: .\models.py:31
+msgid "User"
+msgstr "کاریر"
+
+#: .\models.py:32
+msgid "Post"
+msgstr "پست"
+
 #: .\templates\blog\post_create.html:5 .\templates\blog\post_create.html:10
-#| msgid "Create New Post"
 msgid "New Post"
 msgstr "پست جدید"
 
 #: .\templates\blog\post_create.html:14
-#| msgid "Create New Post"
 msgid "Add New Post"
 msgstr "ساخت پست جدید"
 
