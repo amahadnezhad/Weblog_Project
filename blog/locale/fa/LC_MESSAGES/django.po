@@ -8,15 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-25 01:14+0330\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2024-03-25 16:38+0330\n"
+"PO-Revision-Date: 2024-03-25 16:39+0330\n"
+"Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Translated-Using: django-rosetta 0.10.0\n"
 
 #: .\models.py:9
 msgid "Published"
@@ -138,6 +139,18 @@ msgstr "قبلی"
 #: .\templates\blog\posts_list.html:58
 msgid "Next"
 msgstr "بعدی"
+
+#: .\views.py:35
+msgid "Comment Added SuccessFully"
+msgstr "نظر شما با موفقیت ایجاد شد"
+
+#: .\views.py:69
+msgid "Post Has Unliked"
+msgstr "مطلب پسندیده نشد"
+
+#: .\views.py:73
+msgid "Post Has Liked"
+msgstr "مطلب پسندیده شد"
 
 #~ msgid "By: "
 #~ msgstr "توسط:"
