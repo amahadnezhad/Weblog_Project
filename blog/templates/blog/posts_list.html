@@ -28,7 +28,7 @@
                                                 <a href="{% url 'post_detail' post.id %}"
                                                    class="btn btn-sm btn-outline-success">{% trans "Read More" %}</a>
                                             </div>
-                                            <small class="text-muted">Likes: {{ post.likes.count|translate_number }}</small>
+                                            <small class="text-muted">{% trans "Likes" %}: {{ post.likes.count|translate_number }}</small>
                                         </div>
                                     </div>
                                 </div>

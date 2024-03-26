@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-25 16:38+0330\n"
+"POT-Creation-Date: 2024-03-26 17:43+0330\n"
 "PO-Revision-Date: 2024-03-25 16:39+0330\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -88,23 +88,23 @@ msgstr "حذف"
 msgid "Are You Sure To Delete "
 msgstr "آیا از حذف این مطلب مطمئن هستید؟"
 
-#: .\templates\blog\post_detail.html:29
+#: .\templates\blog\post_detail.html:30 .\templates\blog\posts_list.html:31
 msgid "Likes"
 msgstr "علاقه مندی ها"
 
-#: .\templates\blog\post_detail.html:69
+#: .\templates\blog\post_detail.html:70
 msgid "Comments"
 msgstr "نظرات"
 
-#: .\templates\blog\post_detail.html:84
+#: .\templates\blog\post_detail.html:85
 msgid "No comments yet! Be the first one."
 msgstr "نظری یافت نشد! اولین نفر باشید."
 
-#: .\templates\blog\post_detail.html:90
+#: .\templates\blog\post_detail.html:91
 msgid "Add new comment"
 msgstr "نظر خود را بنویسید"
 
-#: .\templates\blog\post_detail.html:94
+#: .\templates\blog\post_detail.html:95
 msgid "Send"
 msgstr "ارسال"
 
@@ -116,27 +116,27 @@ msgstr "ویرایش"
 msgid "Update"
 msgstr "ویرایش"
 
-#: .\templates\blog\posts_list.html:5
+#: .\templates\blog\posts_list.html:6
 msgid "Blog"
 msgstr "وبلاگ"
 
-#: .\templates\blog\posts_list.html:28
+#: .\templates\blog\posts_list.html:29
 msgid "Read More"
 msgstr "بیشتر بخوانید"
 
-#: .\templates\blog\posts_list.html:41
+#: .\templates\blog\posts_list.html:42
 msgid "No Post Available!"
 msgstr "مطلبی یافت نشد!"
 
-#: .\templates\blog\posts_list.html:42
+#: .\templates\blog\posts_list.html:43
 msgid "Create New Post"
 msgstr "ساخت پست جدید"
 
-#: .\templates\blog\posts_list.html:52
+#: .\templates\blog\posts_list.html:53
 msgid "Previous"
 msgstr "قبلی"
 
-#: .\templates\blog\posts_list.html:58
+#: .\templates\blog\posts_list.html:59
 msgid "Next"
 msgstr "بعدی"
 
