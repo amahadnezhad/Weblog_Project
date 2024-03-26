@@ -136,11 +136,6 @@ LOCALE_PATHS = (
     'templates/locale',
 )
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.0/howto/static-files/
-
-STATIC_URL = 'static/'
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
@@ -165,3 +160,7 @@ MEDIA_ROOT = str(BASE_DIR.joinpath('media'))
 MESSAGE_TAGS = {
     messages.ERROR: 'danger',
 }
+
+# Static Files Settings
+STATIC_URL = 'static/'
+STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]
