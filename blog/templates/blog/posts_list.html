@@ -1,6 +1,7 @@
 {% extends '_base.html' %}
 {% load jalali_tags %}
 {% load i18n %}
+{% load persian_translation_tags %}
 
 {% block page_title %}{% trans "Blog"%}{% endblock page_title %}
 {% block content %}
@@ -20,14 +21,14 @@
                                     <div class="col-md-8">
                                         <h5 class="card-title">{{ post.title }}</h5>
                                         <h6 class="card-subtitle mb-2 text-muted small mt-2">By: {{ post.author }}
-                                            | {{ post.date_created|to_jalali:'%Y/%m/%d' }}</h6>
+                                            | {{ post.date_created|to_jalali:'%Y/%m/%d'|translate_number }}</h6>
                                         <p class="card-text">{{ post.text|truncatewords:100 }}</p>
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="btn-group">
                                                 <a href="{% url 'post_detail' post.id %}"
                                                    class="btn btn-sm btn-outline-success">{% trans "Read More" %}</a>
                                             </div>
-                                            <small class="text-muted">Likes: {{ post.likes.count }}</small>
+                                            <small class="text-muted">Likes: {{ post.likes.count|translate_number }}</small>
                                         </div>
                                     </div>
                                 </div>
@@ -52,7 +53,7 @@
                 <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">{% trans "Previous" %}</a></li>
             {% endif %}
 
-            <li class="page-item"><a class="page-link" href="#">{{ page_obj.number }}</a></li>
+            <li class="page-item"><a class="page-link" href="#">{{ page_obj.number|translate_number }}</a></li>
 
             {% if page_obj.has_next %}
                 <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">{% trans "Next" %}</a></li>
