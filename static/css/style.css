@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "Yekan";
+    src: url("../fonts/Yekan.ttf");
+}
+@font-face {
+    font-family: "Yekan";
+    src: url("../fonts/Yekan.ttf");
+    font-weight: bold;
+}
+
+* {
+    font-family: 'Yekan', sans-serif;
+    line-height: 1.8rem;
+}
+
+/* SM breakpoint */
+@media (min-width: 576px) {
+    /* CUSTOM WIDTHS */
+    .w-sm-75 { width: 75%!important; }
+}
